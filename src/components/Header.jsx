@@ -5,9 +5,9 @@ import Nav from "./Nav";
 
 const Header = () => {
     return (
-        <header>
-            <img src={logo} alt="Little Lemon Logo" />
-            <Nav />
+        <header className="container header">
+            <img src={logo} alt="Little Lemon Logo" className="logo" />
+            <Nav navStyle="navbar" />
         </header>
     );
 };
