@@ -3,6 +3,7 @@ import greekSaladImage from "../assets/greek-salad.jpg";
 import bruschettaImage from "../assets/bruschetta.jpg";
 import lemonDessertImage from "../assets/lemon-dessert.jpg";
 import DishCard from "./DishCard";
+import "./styles/specials.css";
 
 const dishes = [
     {
@@ -31,8 +32,8 @@ const dishes = [
 
 const Specials = () => {
     return (
-        <section>
-            <div>
+        <section className="container grid specials">
+            <div className="specials-header">
                 <h2>This week specials!</h2>
                 <p>Online Menu</p>
             </div>
