@@ -1,5 +1,6 @@
 footer {
     background-color: #495e57;
+    padding: 2.5rem 0;
 }
 
 .container-footer {
@@ -38,4 +39,8 @@ a:hover {
 p {
     font-weight: 700;
     font-size: 1.4rem;
+}
+
+footer svg {
+    margin-right: 0.75rem;
 }
