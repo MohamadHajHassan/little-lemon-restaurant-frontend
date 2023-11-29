@@ -4,6 +4,7 @@ import bruschettaImage from "../assets/bruschetta.jpg";
 import lemonDessertImage from "../assets/lemon-dessert.jpg";
 import DishCard from "./DishCard";
 import "./styles/specials.css";
+import { Link } from "react-router-dom";
 
 const dishes = [
     {
@@ -35,7 +36,9 @@ const Specials = () => {
         <section className="container grid specials">
             <div className="specials-header">
                 <h2>This week specials!</h2>
-                <p>Online Menu</p>
+                <Link to={"/order-online"} className="button-primary">
+                    Online Menu
+                </Link>
             </div>
             {dishes.map((dish, index) => (
                 <DishCard key={index} dish={dish} />
