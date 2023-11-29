@@ -1,5 +1,8 @@
 import React from "react";
 import "./styles/dishCard.css";
+import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMotorcycle } from "@fortawesome/free-solid-svg-icons";
 
 const DishCard = ({ dish }) => {
     return (
@@ -13,7 +16,10 @@ const DishCard = ({ dish }) => {
             </div>
             <div className="dish-card-body">
                 <p>{dish.description}</p>
-                <p>Order a delivery</p>
+                <Link to={"/order-online"}>
+                    Order a delivery
+                    <FontAwesomeIcon icon={faMotorcycle} />
+                </Link>
             </div>
         </article>
     );

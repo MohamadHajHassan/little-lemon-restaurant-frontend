@@ -54,4 +54,13 @@
 .dish-card-body * {
     color: #495e57;
     font-weight: 400;
+    margin-top: 2rem;
+}
+
+.dish-card-body a {
+    font-weight: bold;
+}
+
+.dish-card-body svg {
+    margin-left: 0.5rem;
 }
