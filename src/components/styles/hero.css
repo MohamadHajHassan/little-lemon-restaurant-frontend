@@ -17,13 +17,15 @@ h1 {
     color: #f4ce14;
 }
 
-h2 {
+.hero h2 {
     color: #ffffff;
+    font-size: 2rem;
 }
 
-p {
+.hero p {
     margin-top: 1.5rem;
     color: #ffffff;
+    font-weight: 400;
 }
 
 .hero-image {
@@ -34,4 +36,13 @@ p {
     justify-self: end;
     border-radius: 1rem;
     object-fit: cover;
+}
+
+.hero .button-primary {
+    display: inline-block;
+    margin-top: 2rem;
+}
+.hero .button-primary:hover,
+.hero .button-primary:focus {
+    border-color: #f4ce14;
 }
