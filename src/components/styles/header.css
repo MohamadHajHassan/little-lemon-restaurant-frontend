@@ -21,11 +21,8 @@
     list-style-type: none;
 }
 
-.navbar li {
-    padding: 1.5rem 1rem;
-}
-
 .navbar a {
+    padding: 2.5rem 1rem;
     text-decoration: none;
     color: #495e57;
     font-weight: 600;
@@ -35,4 +32,5 @@
 .navbar li:hover,
 .navbar li:focus {
     background-color: #f4ce14;
+    transition: 0.7s;
 }
