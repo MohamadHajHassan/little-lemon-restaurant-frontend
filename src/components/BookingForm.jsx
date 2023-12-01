@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./styles/bookingForm.css";
 
-const BookingForm = ({ availableTimes, dispatchDateChange }) => {
+const BookingForm = ({ availableTimes, dispatchDateChange, submitForm }) => {
     const occasions = ["Birthday", "Anniversary"];
 
     const [date, setDate] = useState(new Date().toISOString().split("T")[0]);
@@ -28,6 +28,7 @@ const BookingForm = ({ availableTimes, dispatchDateChange }) => {
 
     const handleFormSubmit = e => {
         e.preventDefault();
+        submitForm({ date, time, guests, occasion });
     };
 
     return (

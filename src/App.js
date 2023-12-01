@@ -5,6 +5,7 @@ import Header from "./components/Header";
 import { Routes, Route } from "react-router-dom";
 import UnderConstruction from "pages/UnderConstruction";
 import Reservations from "pages/Reservations";
+import ConfirmedBooking from "pages/ConfirmedBooking";
 
 function App() {
     return (
@@ -21,6 +22,10 @@ function App() {
                         element={<UnderConstruction />}
                     />
                     <Route path="/login" element={<UnderConstruction />} />
+                    <Route
+                        path="/confirmed-booking"
+                        element={<ConfirmedBooking />}
+                    />
                 </Routes>
             </main>
             <Footer />
