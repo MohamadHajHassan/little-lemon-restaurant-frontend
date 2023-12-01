@@ -1,0 +1,45 @@
+.reservations {
+    align-items: center;
+}
+
+.reservations h2 {
+    background-color: #495e57;
+    color: #ffffff;
+    text-align: center;
+    padding: 2rem;
+}
+.form-items {
+    margin: 1rem auto;
+    max-width: 30rem;
+    padding: 3rem 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.form-items div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-items label {
+    font-size: 1.125rem;
+    font-weight: 600;
+    line-height: 1.5rem;
+    cursor: pointer;
+}
+
+.form-items input,
+.form-items select {
+    height: 2.5rem;
+    padding-inline: 1rem;
+    border: 0.1rem solid #e0e0e0;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+.btn {
+    font-size: 1rem;
+    font-weight: 600;
+}

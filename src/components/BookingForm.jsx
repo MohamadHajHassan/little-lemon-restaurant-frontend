@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./styles/bookingForm.css";
 
 const BookingForm = () => {
     const occasions = ["Birthday", "Anniversary"];
@@ -37,53 +38,63 @@ const BookingForm = () => {
     };
 
     return (
-        <form onSubmit={handleFormSubmit}>
-            <div>
-                <label htmlFor="res-date">Choose date</label>
-                <input
-                    type="date"
-                    id="res-date"
-                    value={date}
-                    onChange={handleDateChange}
-                />
-            </div>
-            <div>
-                <label htmlFor="res-time">Choose time</label>
-                <select id="res-time" value={time} onChange={handleTimeChange}>
-                    {availableTimes.map(time => (
-                        <option key={time.value} value={time.value}>
-                            {time.label}
-                        </option>
-                    ))}
-                </select>
-            </div>
-            <div>
-                <label htmlFor="guests">Number of guests</label>
-                <input
-                    type="number"
-                    placeholder="1"
-                    min="1"
-                    max="10"
-                    id="guests"
-                    value={guests}
-                    onChange={handleGuestsChange}
-                />
-            </div>
-            <div>
-                <label htmlFor="occasion">Occasion</label>
-                <select
-                    id="occasion"
-                    value={occasion}
-                    onChange={handleOccasionChange}>
-                    {occasions.map(occasion => (
-                        <option key={occasion} value={occasion}>
-                            {occasion}
-                        </option>
-                    ))}
-                </select>
-            </div>
-            <div>
-                <input type="submit" value="Make Your reservation" />
+        <form onSubmit={handleFormSubmit} className="reservations">
+            <h2>Book a table</h2>
+            <div className="form-items">
+                <div>
+                    <label htmlFor="res-date">Choose date</label>
+                    <input
+                        type="date"
+                        id="res-date"
+                        value={date}
+                        onChange={handleDateChange}
+                    />
+                </div>
+                <div>
+                    <label htmlFor="res-time">Choose time</label>
+                    <select
+                        id="res-time"
+                        value={time}
+                        onChange={handleTimeChange}>
+                        {availableTimes.map(time => (
+                            <option key={time.value} value={time.value}>
+                                {time.label}
+                            </option>
+                        ))}
+                    </select>
+                </div>
+                <div>
+                    <label htmlFor="guests">Number of guests</label>
+                    <input
+                        type="number"
+                        placeholder="1"
+                        min="1"
+                        max="10"
+                        id="guests"
+                        value={guests}
+                        onChange={handleGuestsChange}
+                    />
+                </div>
+                <div>
+                    <label htmlFor="occasion">Occasion</label>
+                    <select
+                        id="occasion"
+                        value={occasion}
+                        onChange={handleOccasionChange}>
+                        {occasions.map(occasion => (
+                            <option key={occasion} value={occasion}>
+                                {occasion}
+                            </option>
+                        ))}
+                    </select>
+                </div>
+                <div>
+                    <input
+                        type="submit"
+                        value="Make Your reservation"
+                        className="button-primary btn"
+                    />
+                </div>
             </div>
         </form>
     );
