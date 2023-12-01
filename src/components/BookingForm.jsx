@@ -50,8 +50,8 @@ const BookingForm = ({ availableTimes, dispatchDateChange }) => {
                         value={time}
                         onChange={handleTimeChange}>
                         {availableTimes.map(time => (
-                            <option key={time.value} value={time.value}>
-                                {time.label}
+                            <option value={time} key={time}>
+                                {time}
                             </option>
                         ))}
                     </select>
