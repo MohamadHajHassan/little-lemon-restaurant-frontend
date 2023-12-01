@@ -1,16 +1,8 @@
 import React, { useState } from "react";
 import "./styles/bookingForm.css";
 
-const BookingForm = () => {
+const BookingForm = ({ availableTimes, dispatchDateChange }) => {
     const occasions = ["Birthday", "Anniversary"];
-    const [availableTimes, setAvailableTimes] = useState([
-        { label: "17:00", value: "17:00" },
-        { label: "18:00", value: "18:00" },
-        { label: "19:00", value: "19:00" },
-        { label: "20:00", value: "20:00" },
-        { label: "21:00", value: "21:00" },
-        { label: "22:00", value: "22:00" },
-    ]);
 
     const [date, setDate] = useState(new Date().toISOString().split("T")[0]);
     const [time, setTime] = useState(availableTimes[0]);
@@ -19,6 +11,7 @@ const BookingForm = () => {
 
     const handleDateChange = e => {
         setDate(e.target.value);
+        dispatchDateChange(e.target.value);
     };
 
     const handleTimeChange = e => {
