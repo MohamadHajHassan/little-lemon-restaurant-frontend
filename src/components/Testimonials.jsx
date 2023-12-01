@@ -10,24 +10,28 @@ const customers = [
     {
         name: "Jane Doe",
         image: customer1Image,
+        rating: 5,
         says: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do 
         eiusmod tempor incididunt ut labore et dolore magna aliqua.`,
     },
     {
         name: "John Doe",
         image: customer2Image,
+        rating: 5,
         says: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do 
         eiusmod tempor incididunt ut labore et dolore magna aliqua.`,
     },
     {
         name: "Jane Doe",
         image: customer3Image,
+        rating: 4,
         says: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do 
         eiusmod tempor incididunt ut labore et dolore magna aliqua.`,
     },
     {
         name: "John Doe",
         image: customer4Image,
+        rating: 5,
         says: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do 
         eiusmod tempor incididunt ut labore et dolore magna aliqua.`,
     },

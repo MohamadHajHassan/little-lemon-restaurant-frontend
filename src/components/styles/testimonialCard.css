@@ -25,3 +25,8 @@
     color: #495e57;
     font-weight: 400;
 }
+
+.testimonial-card span {
+    color: #f4ce14;
+    align-self: center;
+}
