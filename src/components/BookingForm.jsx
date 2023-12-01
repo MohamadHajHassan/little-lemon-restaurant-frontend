@@ -26,9 +26,69 @@ const BookingForm = ({ availableTimes, dispatchDateChange, submitForm }) => {
         setOccasion(e.target.value);
     };
 
+    const validationRules = {
+        date: {
+            required: true,
+        },
+
+        time: {
+            required: true,
+        },
+        guests: {
+            required: true,
+            min: 1,
+            max: 10,
+        },
+        occasion: {
+            required: true,
+        },
+    };
+
+    const [errors, setErrors] = useState({});
+
+    const getFormValues = () => ({
+        date,
+        time,
+        guests,
+        occasion,
+    });
+
     const handleFormSubmit = e => {
         e.preventDefault();
-        submitForm({ date, time, guests, occasion });
+        const errors = {};
+        const formValues = getFormValues();
+        for (const field in validationRules) {
+            const rule = validationRules[field];
+            const value = formValues[field];
+            console.log(value);
+
+            if (field === "date") {
+                const chosenDate = new Date(value);
+                const minDate = new Date(
+                    new Date().toISOString().split("T")[0]
+                );
+                if (chosenDate < minDate) {
+                    errors[field] = `Date cannot be less than ${
+                        minDate.toISOString().split("T")[0]
+                    }!`;
+                }
+            } else {
+                if (rule.required && !value) {
+                    errors[field] = `${field} is required!`;
+                } else if (rule.min && value < rule.min) {
+                    errors[field] = `${field} must be at least ${rule.min}!`;
+                } else if (rule.max && value > rule.max) {
+                    errors[
+                        field
+                    ] = `${field} must be less than or equal to ${rule.max}!`;
+                }
+            }
+        }
+        if (Object.keys(errors).length === 0) {
+            submitForm({ date, time, guests, occasion });
+        } else {
+            setErrors(errors);
+        }
     };
 
     return (
@@ -43,6 +103,7 @@ const BookingForm = ({ availableTimes, dispatchDateChange, submitForm }) => {
                         value={date}
                         onChange={handleDateChange}
                     />
+                    {errors.date && <p className="error">{errors.date}</p>}
                 </div>
                 <div>
                     <label htmlFor="res-time">Choose time</label>
@@ -56,6 +117,7 @@ const BookingForm = ({ availableTimes, dispatchDateChange, submitForm }) => {
                             </option>
                         ))}
                     </select>
+                    {errors.time && <p className="error">{errors.time}</p>}
                 </div>
                 <div>
                     <label htmlFor="guests">Number of guests</label>
@@ -68,6 +130,7 @@ const BookingForm = ({ availableTimes, dispatchDateChange, submitForm }) => {
                         value={guests}
                         onChange={handleGuestsChange}
                     />
+                    {errors.guests && <p className="error">{errors.guests}</p>}
                 </div>
                 <div>
                     <label htmlFor="occasion">Occasion</label>
@@ -81,6 +144,9 @@ const BookingForm = ({ availableTimes, dispatchDateChange, submitForm }) => {
                             </option>
                         ))}
                     </select>
+                    {errors.occasion && (
+                        <p className="error">{errors.occasion}</p>
+                    )}
                 </div>
                 <div>
                     <input
