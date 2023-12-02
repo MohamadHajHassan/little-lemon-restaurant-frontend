@@ -1,0 +1,60 @@
+.container {
+    max-width: 61.625rem;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.grid {
+    display: grid;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #495e57;
+}
+
+h1,
+h2 {
+    line-height: 1;
+    font-family: "Markazi Text";
+    font-weight: normal;
+}
+
+h1 {
+    font-size: 3.5rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+}
+
+img {
+    max-width: 100%;
+}
+
+button {
+    border: none;
+    cursor: pointer;
+}
+
+.button-primary {
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    background-color: #f4ce14;
+    color: #495e57;
+    font-weight: bold;
+    border: 0.2rem solid #f4ce14;
+    transition: background, border, color 0.5s;
+}
+
+.button-primary:hover,
+.button-primary:focus {
+    background-color: #495e57;
+    border-color: #495e57;
+    color: #ffffff;
+}
