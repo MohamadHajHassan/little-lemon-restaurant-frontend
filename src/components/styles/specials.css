@@ -24,3 +24,13 @@
 .specials-header a {
     color: #495e57;
 }
+
+@media (max-width: 750px) {
+    .specials {
+        grid-template-columns: 1fr;
+    }
+
+    .specials-header {
+        grid-column: 1 / 2;
+    }
+}

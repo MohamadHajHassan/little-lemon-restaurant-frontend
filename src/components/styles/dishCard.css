@@ -64,3 +64,9 @@
 .dish-card-body svg {
     margin-left: 0.5rem;
 }
+
+@media (max-width: 750px) {
+    .dish-card {
+        grid-row: auto;
+    }
+}
