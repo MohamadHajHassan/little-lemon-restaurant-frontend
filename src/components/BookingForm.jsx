@@ -5,7 +5,7 @@ const BookingForm = ({ availableTimes, dispatchDateChange, submitForm }) => {
     const occasions = ["Birthday", "Anniversary"];
 
     const [date, setDate] = useState(new Date().toISOString().split("T")[0]);
-    const [time, setTime] = useState(availableTimes ? availableTimes[0] : []);
+    const [time, setTime] = useState(availableTimes ? availableTimes[0] : "");
     const [guests, setGuests] = useState(1);
     const [occasion, setOccasion] = useState(occasions[0]);
 
