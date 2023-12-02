@@ -46,3 +46,19 @@ h1 {
 .hero .button-primary:focus {
     border-color: #f4ce14;
 }
+
+@media (max-width: 750px) {
+    .hero .container {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+    }
+
+    .hero-info {
+        grid-row: 1;
+    }
+
+    .hero-image {
+        grid-column: 1;
+        grid-row: 2;
+    }
+}
