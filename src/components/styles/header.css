@@ -11,6 +11,10 @@
     line-height: 0;
     max-width: 15.625rem;
 }
+.nav {
+    display: flex;
+    justify-content: flex-end;
+}
 
 .logo:hover {
     opacity: 0.8;
@@ -33,4 +37,55 @@
 .navbar li:focus {
     background-color: #f4ce14;
     transition: 0.7s;
+}
+
+.hamburger-menu {
+    display: none;
+    cursor: pointer;
+    color: #495e57;
+}
+
+.hamburger-menu:hover {
+    background-color: #f4ce14;
+}
+
+@media only screen and (max-width: 1050px) {
+    .navbar {
+        grid-template-columns: auto auto;
+    }
+
+    .hamburger-menu {
+        width: 2.5rem;
+        grid-column: 3;
+        justify-self: end;
+        align-self: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 2rem 1rem;
+        color: #495e57;
+    }
+
+    .open {
+        position: absolute;
+        flex-direction: column;
+        width: 68vw;
+        top: 0;
+        left: 0;
+        background-color: #ffffff;
+        box-shadow: 2px 0px 4px 0px rgba(0, 0, 0, 0.2);
+        z-index: 100;
+    }
+
+    .open a {
+        padding: 2rem;
+    }
+
+    .closed {
+        display: none;
+    }
+
+    .navbar li {
+        flex-direction: column;
+    }
 }
