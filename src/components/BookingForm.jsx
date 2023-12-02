@@ -60,7 +60,6 @@ const BookingForm = ({ availableTimes, dispatchDateChange, submitForm }) => {
         for (const field in validationRules) {
             const rule = validationRules[field];
             const value = formValues[field];
-            console.log(value);
 
             if (field === "date") {
                 const chosenDate = new Date(value);

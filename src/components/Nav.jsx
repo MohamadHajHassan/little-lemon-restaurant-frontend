@@ -11,7 +11,6 @@ const Nav = ({ navStyle }) => {
     };
 
     const { pathname } = useLocation();
-    console.log(pathname);
 
     return (
         <nav className={navStyle === "navbar" ? "nav" : ""}>
