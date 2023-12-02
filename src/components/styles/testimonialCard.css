@@ -4,10 +4,12 @@
     min-height: 23rem;
     display: flex;
     flex-direction: column;
-    height: 100%;
+    height: 90%;
     padding: 1rem;
+    margin: 1rem;
     background-color: #edefee;
     border-radius: 1rem;
+    margin-inline: auto;
 }
 
 .testimonial-card img {
@@ -29,4 +31,11 @@
 .testimonial-card span {
     color: #f4ce14;
     align-self: center;
+}
+
+@media (max-width: 750px) {
+    .testimonial-card {
+        grid-column: auto;
+        grid-row: auto;
+    }
 }
