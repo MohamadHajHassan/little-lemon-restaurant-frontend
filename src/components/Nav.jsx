@@ -1,7 +1,7 @@
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const Nav = ({ navStyle }) => {
     const [isOpen, setIsOpen] = useState(false);
@@ -9,6 +9,9 @@ const Nav = ({ navStyle }) => {
     const toggleHamburgerMenu = () => {
         setIsOpen(prevState => !prevState);
     };
+
+    const { pathname } = useLocation();
+    console.log(pathname);
 
     return (
         <nav className={navStyle === "navbar" ? "nav" : ""}>
@@ -20,34 +23,81 @@ const Nav = ({ navStyle }) => {
                     />
                 </div>
             )}
-            <ul className={`${navStyle} ${navStyle === "navbar"? isOpen ? "open" : "closed":'' }`}>
+            <ul
+                className={`${navStyle} ${
+                    navStyle === "navbar" ? (isOpen ? "open" : "closed") : ""
+                }`}>
                 <li>
-                    <Link to="/" onClick={toggleHamburgerMenu}>
+                    <Link
+                        to="/"
+                        onClick={toggleHamburgerMenu}
+                        className={
+                            navStyle === "navbar" && pathname === "/"
+                                ? "selected"
+                                : ""
+                        }>
                         HOME
                     </Link>
                 </li>
                 <li>
-                    <Link to="/about" onClick={toggleHamburgerMenu}>
+                    <Link
+                        to="/about"
+                        onClick={toggleHamburgerMenu}
+                        className={
+                            navStyle === "navbar" && pathname === "/about"
+                                ? "selected"
+                                : ""
+                        }>
                         ABOUT
                     </Link>
                 </li>
                 <li>
-                    <Link to="/menu" onClick={toggleHamburgerMenu}>
+                    <Link
+                        to="/menu"
+                        onClick={toggleHamburgerMenu}
+                        className={
+                            navStyle === "navbar" && pathname === "/menu"
+                                ? "selected"
+                                : ""
+                        }>
                         MENU
                     </Link>
                 </li>
                 <li>
-                    <Link to="/reservations" onClick={toggleHamburgerMenu}>
+                    <Link
+                        to="/reservations"
+                        onClick={toggleHamburgerMenu}
+                        className={
+                            navStyle === "navbar" &&
+                            pathname === "/reservations"
+                                ? "selected"
+                                : ""
+                        }>
                         RESERVATIONS
                     </Link>
                 </li>
                 <li>
-                    <Link to="/order-online" onClick={toggleHamburgerMenu}>
+                    <Link
+                        to="/order-online"
+                        onClick={toggleHamburgerMenu}
+                        className={
+                            navStyle === "navbar" &&
+                            pathname === "/order-online"
+                                ? "selected"
+                                : ""
+                        }>
                         ORDER ONLINE
                     </Link>
                 </li>
                 <li>
-                    <Link to="/login" onClick={toggleHamburgerMenu}>
+                    <Link
+                        to="/login"
+                        onClick={toggleHamburgerMenu}
+                        className={
+                            navStyle === "navbar" && pathname === "/login"
+                                ? "selected"
+                                : ""
+                        }>
                         LOGIN
                     </Link>
                 </li>

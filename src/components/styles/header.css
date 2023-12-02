@@ -39,6 +39,10 @@
     transition: 0.7s;
 }
 
+.selected {
+    background-color: #f4ce14;
+}
+
 .hamburger-menu {
     display: none;
     cursor: pointer;
