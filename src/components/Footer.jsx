@@ -27,7 +27,7 @@ const Footer = () => {
                     <p>Navigation</p>
                     <Nav navStyle="nav-footer" />
                 </div>
-                <div>
+                <div className="contact-us">
                     <p>Contact us</p>
                     <address>
                         <FontAwesomeIcon icon={faLocationDot} />
@@ -41,7 +41,7 @@ const Footer = () => {
                         </a>
                     </address>
                 </div>
-                <div className="test">
+                <div className="social-media">
                     <p>Connect with us</p>
                     <a
                         href="https://www.facebook.com"

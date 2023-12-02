@@ -44,3 +44,27 @@ p {
 footer svg {
     margin-right: 0.75rem;
 }
+
+@media (max-width: 750px) {
+    .container-footer {
+        grid-template-columns: auto auto;
+    }
+
+    .contact-us {
+        margin-top: 2rem;
+    }
+
+    .social-media {
+        margin-top: 2rem;
+    }
+}
+
+@media (max-width: 550px) {
+    .container-footer {
+        grid-template-columns: auto;
+    }
+
+    .navigation {
+        margin-top: 2rem;
+    }
+}
