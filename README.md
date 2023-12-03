@@ -1,7 +1,7 @@
 # Little Lemon Restaurant
 
-This project is the capstone project of the Meta Front End Developer
-specialization.
+Welcome to the Little Lemon Restaurant Online Reservation System! This project
+is the capstone project of the Meta Front End Developer specialization.
 
 ## Description
 
@@ -11,16 +11,22 @@ interface for customers to make reservations.
 
 ## Features
 
-- Smooth navigation through the pages.
-- Make a reservation using an interactive form.
-- client-side form validation.
+- View restaurant information including overview, special menu items, and
+    testimonials.
+- View available reservation times for a chosen date and party size
+- Make a reservation using an interactive form with client-side form
+    validation.
 - Receive a reservation confirmation.
 - Built with React for a modern and interactive user experience.
-- Fully responsive to work perfectly on every screen.
+- Clean UI design
+- Fully responsive design for optimal ux on various devices.
 
 ## Technologies Used
 
-HTML5 CSS3 JavaScript React
+- HTML5
+- CSS3
+- JavaScript
+- React
 
 ## Installation
 
@@ -42,8 +48,3 @@ website and interact with its features.
 
 Contributions are welcome! If you find any issues or have suggestions for
 improvements, please open an issue on the GitHub repository.
-
-## Contact
-
-For any inquiries or questions regarding this project, please contact
-[Mohamad Haj Hassan](mohamadhajhassan33@gmail.com).
